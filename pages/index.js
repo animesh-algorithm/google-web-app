@@ -13,7 +13,7 @@ export default function Home() {
     event.preventDefault();
     const term = searchInputRef.current?.value;
     if (!term?.trim()) return;
-    router.push(`/search?term=${term.trim()}`);
+    router.push(`/search?term=${term.trim()}&searchType=`);
   };
   return (
     <div>
@@ -34,7 +34,7 @@ export default function Home() {
           height="100"
         />
         <div className="flex w-full mt-5 mx-auto max-w-[90%] hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full border items-center sm:max-w-xl lg:max-w-2xl">
-          <SearchIcon className="h-5 text-gray-500 mr-3" />
+          <SearchIcon className="h-5 mr-3 text-gray-500" />
           <input
             ref={searchInputRef}
             type="text"
@@ -42,7 +42,7 @@ export default function Home() {
           />
           <MicrophoneIcon className="h-5" />
         </div>
-        <div className="flex flex-col sm:flex-row w-1/2 space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
+        <div className="flex flex-col justify-center w-1/2 mt-8 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
           <button className="btn" onClick={search}>
             Google Search
           </button>

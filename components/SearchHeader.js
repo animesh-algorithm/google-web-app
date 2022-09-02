@@ -40,9 +40,7 @@ const SearchHeader = () => {
           />
           <MicrophoneIcon className="hidden h-6 pl-4 mr-3 text-blue-500 border-l-2 border-gray-300 sm:inline-flex" />
           <SearchIcon
-            className="hidden h-6 text-blue-500 sm:inline-flex"
-            pl-4
-            border-l-2
+            className="hidden h-6 pl-4 text-blue-500 border-l-2 sm:inline-flex"
           />
           <button onClick={search} type="submit" hidden></button>
         </form>

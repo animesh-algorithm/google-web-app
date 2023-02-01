@@ -20,6 +20,7 @@ const search = ({ results }) => {
 };
 
 export const getServerSideProps = async (context) => {
+  const startIndex = context.query.start || "1";
   const mockData = false;
   const data = mockData
     ? MockData
@@ -28,7 +29,7 @@ export const getServerSideProps = async (context) => {
           process.env.API_KEY
         }&cx=${process.env.CONTEXT_KEY}&q=${context.query.term}${
           context.query.searchType && `&searchType=image`
-        }`
+        }&start=${startIndex}`
       ).then((response) => response.json());
   return {
     props: {

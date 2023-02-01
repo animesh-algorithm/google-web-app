@@ -6,7 +6,6 @@ import MockData from "../MockData";
 
 const search = ({ results }) => {
   const router = useRouter();
-  console.log(router.query.term);
   return (
     <div>
       <Head>
@@ -21,7 +20,7 @@ const search = ({ results }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const mockData = true;
+  const mockData = false;
   const data = mockData
     ? MockData
     : await fetch(

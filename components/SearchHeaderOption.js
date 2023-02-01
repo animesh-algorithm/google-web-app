@@ -4,7 +4,9 @@ const SearchHeaderOption = ({ title, Icon, selected }) => {
   const router = useRouter();
   const selectTab = () => {
     router.push(
-      `/search?term=${router.query.term}&searchType=${title.toLowerCase()}`
+      `/search?term=${router.query.term}&searchType=${
+        title === "Images" ? "image" : ""
+      }`
     );
   };
   return (

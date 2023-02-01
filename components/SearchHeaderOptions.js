@@ -14,7 +14,7 @@ const SearchHeaderOptions = () => {
       <SearchHeaderOption
         title="Images"
         Icon={PhotographIcon}
-        selected={router.query.searchType === "images"}
+        selected={router.query.searchType === "image"}
       />
     </div>
   );

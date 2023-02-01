@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import ImageResults from "../components/ImageResults";
 import SearchHeader from "../components/SearchHeader";
 import SearchResults from "../components/SearchResults";
 import MockData from "../MockData";
@@ -13,8 +14,12 @@ const search = ({ results }) => {
       </Head>
       {/* Search Header */}
       <SearchHeader />
-      {/* Search Results */}
-      <SearchResults results={results} />
+      {/* Search and Image Results */}
+      {router.query.searchType === "image" ? (
+        <ImageResults results={results} />
+      ) : (
+        <SearchResults results={results} />
+      )}
     </div>
   );
 };

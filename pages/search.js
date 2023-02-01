@@ -5,7 +5,7 @@ import SearchHeader from "../components/SearchHeader";
 import SearchResults from "../components/SearchResults";
 import MockData from "../MockData";
 
-const search = ({ results }) => {
+const Search = ({ results }) => {
   const router = useRouter();
   return (
     <div>
@@ -43,4 +43,4 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-export default search;
+export default Search;

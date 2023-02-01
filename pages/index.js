@@ -46,7 +46,7 @@ export default function Home() {
           <button className="btn" onClick={search}>
             Google Search
           </button>
-          <button className="btn">I'm feeling lucky</button>
+          <button className="btn">I&apos;m feeling lucky</button>
         </div>
       </form>
       {/* Footer */}
